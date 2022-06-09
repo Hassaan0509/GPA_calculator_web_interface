@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="/GpaCalculator.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div id="main-div" class="container-fluid">
+      <header>
+        <h1 id="main-heading">GPA Calculator</h1>
+      </header>
+
+      <p id="starting-para">
+        Use this calculator to calculate grade point average (GPA) and generate
+        a GPA report. If you use percentage grades, have grades on a different
+        scale or in high school with AP/IB classes, please change the "Settings"
+        to input specific values. Also use the settings to group courses into
+        semesters or to include past GPA.
+      </p>
+
+      <div id="output">
+        <table id="output-container">
+          <tr>
+            <td class="output-heading">
+              <h3>Course</h3>
+            </td>
+            <td class="output-heading">
+              <h3>Credit</h3>
+            </td>
+            <td class="output-heading">
+              <h3>Grade</h3>
+            </td>
+            <td class="output-heading">
+              <h3>Grade Points</h3>
+            </td>
+          </tr>
+          <tr id="output-data">
+            <td class="output-boxes" id="output-course"></td>
+            <td class="output-boxes" id="output-credit"></td>
+            <td class="output-boxes" id="output-grade"></td>
+            <td class="output-boxes" id="output-grade-points"></td>
+          </tr>
+        </table>
+        <table id="output-container">
+          <tr>
+            <td class="output">Total Credit Hours</td>
+            <td class="output" id="hr-output"></td>
+          </tr>
+          <tr>
+            <td class="output">GPA</td>
+            <td class="output" id="gpa-output"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="gpa-box">
+        <table id="Gpa">
+          <tr>
+            <td>
+              <h3>Course(optional)</h3>
+            </td>
+            <td>
+              <h3>Credits*</h3>
+            </td>
+            <td>
+              <h3>Grade*</h3>
+            </td>
+          </tr>
+          <tr id="add">
+            <td>
+              <input id="course" class="input-field" type="text" />
+            </td>
+            <td>
+              <input id="credit" class="input-field" type="number" />
+            </td>
+            <td>
+              <select id="grades" name="grade">
+                <option value="--">--</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="D-">D-</option>
+                <option value="F">F</option>
+                <option value="I">I</option>
+                <option value="WF">WF</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <button id="add-btn">Add more courses</button>
+        <br />
+        <button id="calculate-btn">Calculate</button>
+        <button id="clear-btn">Clear</button>
+      </div>
+
+      <h2 id="heading-2">
+        Letter grade and the numerical equivalents used for this calculator
+      </h2>
+
+      <p id="info-para">
+        Grade point average (GPA) is a commonly used indicator of an
+        individual's academic achievement in school. It is the average of the
+        grades attained in each course, taking course credit into consideration.
+        Grading systems vary in different countries, or even schools. This
+        calculator accepts letter grades as well as numerical inputs. These
+        letter grades are translated into numerical values as shown below.
+        <br />
+        <b>
+          A+ = 4 grade points
+          <br />
+          A = 4 grade points
+          <br />
+          A- = 3.7 grade points
+          <br />
+          B+ = 3.3 grade points
+          <br />
+          B = 3 grade points
+          <br />
+          B- = 2.7 grade points
+          <br />
+          C+ = 2.3 grade points
+          <br />
+          C = 2 grade points
+          <br />
+          C- = 1.7 grade points
+          <br />
+          D+ = 1.3 grade points
+          <br />
+          D = 1 grade point
+          <br />
+          D- = 0.7 grade points
+          <br />
+          F = 0 grade points
+          <br />
+          F (fail), I (incomplete), WF (withdrawal) will be ignored.
+        </b>
+        <br />
+        Most schools, colleges, and universities in the United States use a
+        grading system based on the letters above, though E is sometimes used
+        instead of F. Grading systems do differ however based on what
+        constitutes an A or B, and some do not include grades such as an A+ or a
+        B-. Others may attribute more weight to certain courses, and thus
+        whatever grade is attained in the course will have a larger effect on
+        overall GPA. The calculator can account for this based on the number of
+        credits attributed to a course, where credit is the "weighting" of the
+        course, as shown in the examples below.
+      </p>
+    </div>
+
+    <script type="text/Javascript" src="/GpaCalculator.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

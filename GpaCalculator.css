@@ -1,0 +1,162 @@
+body {
+  margin: 0%;
+  background-color: lightblue;
+}
+
+#main-div {
+  padding: 0%;
+}
+
+header {
+  background-color: aqua;
+}
+
+#main-heading {
+  text-align: center;
+  padding: 12px 0px;
+  font-family: "Playfair Display", serif;
+}
+
+#starting-para {
+  font-size: 24px;
+  margin: 24px;
+}
+
+#output {
+  width: 42%;
+  background-color: gainsboro;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  margin-top: 60px;
+}
+
+#output-container {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.output-heading,
+.output-boxes {
+  border: 2px solid black;
+  text-align: center;
+  font-weight: 600;
+  padding: 4px;
+  height: 30px;
+}
+
+.output-boxes {
+  font-weight: 400;
+}
+
+.output-heading:first-of-type,
+.output-heading:last-of-type {
+  width: 30%;
+}
+
+.output-heading h3 {
+  margin-bottom: 0%;
+}
+
+.output {
+  border: 2px solid black;
+  text-align: center;
+  font-weight: 600;
+  padding: 4px;
+  height: 30px;
+  width: 50%;
+}
+
+#gpa-box {
+  width: 42%;
+  background-color: gainsboro;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  margin-top: 60px;
+}
+
+#Gpa {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-field,
+#grades {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid black;
+  margin: 4px 0px;
+  height: 30px;
+  width: 90%;
+}
+
+#input-field:focus,
+#grades:focus {
+  outline: none;
+}
+
+#grades {
+  width: 150px;
+}
+
+#add-btn {
+  margin: 8px;
+  width: 25%;
+  text-align: center;
+  margin-left: 35%;
+  border-radius: 8px;
+  padding: 4px;
+  border: none;
+  background-color: gray;
+  opacity: 0.7;
+  color: white;
+}
+
+#add-btn:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#calculate-btn {
+  margin: 8px;
+  width: 25%;
+  text-align: center;
+  margin-left: 25%;
+  border-radius: 8px;
+  padding: 4px;
+  border: none;
+  background-color: blue;
+  opacity: 0.7;
+  color: white;
+  margin-bottom: 24px;
+}
+
+#clear-btn {
+  margin: 8px;
+  width: 15%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 4px;
+  border: none;
+  background-color: black;
+  opacity: 0.7;
+  color: white;
+  margin-bottom: 24px;
+}
+
+#heading-2 {
+  margin-left: 8px;
+}
+
+#info-para {
+  font-size: 20px;
+  margin: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+  #grades {
+    width: 50px;
+  }
+}
